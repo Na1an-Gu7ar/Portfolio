@@ -84,6 +84,12 @@
             }
         }
 
+        .mywork-link {
+            &:after {
+                content: 'MY WORK';
+            }
+        }
+
         .contact-link {
             &:after {
                 content: 'CONTACT';
