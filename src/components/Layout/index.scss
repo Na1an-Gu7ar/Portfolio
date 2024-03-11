@@ -165,11 +165,12 @@
 @media screen and (max-width: 650px) {
     .page{
         display: flex;
-        // overflow: scroll;
+        overflow-x: hidden !important;
+        overflow-y: scroll;
         position: absolute !important;
         top: 5rem;
         width: 103vw;
-        height: 83vh;
+        height: 100vh;
         position: initial;
     }
 }

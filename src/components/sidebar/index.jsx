@@ -16,7 +16,7 @@ const Sidebar = () => {
                     <img className='solid-logo-img' src={LogoN} alt='logo' />
                     <img className='sub-logo' src={LogoSubtitle} alt='nayan' />
                 </Link>
-                <nav className={showNav ? 'mobile-show' : ''}>
+                <nav className={showNav ? 'mobile-show' : 'laptop-show'}>
                     <NavLink exact="true" activeclassname="active" to="/" onClick={() => setShowNav(false)}>
                         <FontAwesomeIcon icon={faHome} color='#4d4d4e' />
                     </NavLink>
@@ -29,7 +29,6 @@ const Sidebar = () => {
                     <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact" onClick={() => setShowNav(false)}>
                         <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e' />
                     </NavLink>
-                    <FontAwesomeIcon icon={faClose} color='#ffd700' size='3x' className='close-icon' />
                     <ul>
                         <li>
                             <a target="_blank" className='linkedin-icon' rel='noreferrer' href="https://www.linkedin.com/in/nayan-gujar-990417232/">
@@ -44,7 +43,8 @@ const Sidebar = () => {
                     </ul>
                 </nav>
 
-                <FontAwesomeIcon onClick={() => setShowNav(true)} icon={faBars} color='#ffd700' size='3x' className='hamburger-icon' />
+                <FontAwesomeIcon onClick={() => setShowNav(false)} style={showNav ? '' : { display: 'none' }} icon={faClose} color='#ffd700' size='3x' className='close-icon' />
+                <FontAwesomeIcon onClick={() => setShowNav(true)} style={showNav ? { display: 'none' } : ''} icon={faBars} color='#ffd700' size='3x' className='hamburger-icon' />
             </div>
         </>
     )

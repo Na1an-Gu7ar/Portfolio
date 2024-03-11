@@ -140,7 +140,6 @@
         text-decoration: none;
         padding: 8px 10px;
         border: 1px solid #ffd700;
-        float: right;
         border-radius: 4px;
 
         &:hover {
@@ -248,11 +247,13 @@
     .container {
         &.contact-page {
             overflow: auto;
+            top: 0%;
             width: 100%;
-            height: 91%;
+            height: 100%;
 
             .text-zone {
                 left: -1rem !important;
+                top: 7rem !important;
 
                 h1 {
                     top: -6rem;
@@ -296,30 +297,29 @@
 
 @media screen and (max-width: 500px) {
     .container {
+        overflow-x: hidden;
+
         &.contact-page {
             .text-zone {
-                left: 5rem;
-                position: relative;
-                top: -15vh;
-
                 h1 {
                     left: 0.5rem;
                     line-height: 48px;
                     font-size: 45px;
-                    width: 54vw;
+                    width: 100vw;
 
-                    &::after{
+                    &::after {
                         line-height: 30px;
                     }
                 }
 
                 p {
-                    width: 40vw;
+                    width: 100vw;
                 }
 
-                .contact-form{
+                .contact-form {
                     width: 107.7%;
-                    form{
+
+                    form {
                         width: 100%;
                     }
                 }
@@ -328,11 +328,10 @@
     }
 
     .map-wrap {
-        position: fixed;
-        top: 10% !important;
-        margin: -10% 0% !important;
-        width: 50%;
-        height: 33%;
+        top: 0rem !important;
+        width: 100% !important;
+        height: 70% !important;
+        margin-top: 35rem !important;
     }
 
     .info-map {
@@ -351,29 +350,29 @@
                 left: -1em !important;
 
                 h1 {
-                    left: 0;
-                    width: 49vw;
+                    left: 0.3 rem;
+                    width: 100vw;
                 }
 
 
                 p {
                     line-height: 18px;
-                    width: 40vw;
+                    width: 100vw;
                 }
 
-                .contact-form{
-                    width: 100%;
+                .contact-form {
+                    width: 98%;
+                    // right: 2.1em !important;
                 }
             }
         }
     }
 
     .map-wrap {
-        top: 19% !important;
-        // margin: 100% 0% !important;
-        width: 56% !important;
-        height: 40% !important;
-        right: 0.3rem;
+        top: 0rem !important;
+        width: 100% !important;
+        height: 70% !important;
+        margin-top: 35rem !important;
     }
 
     .info-map {
@@ -381,50 +380,50 @@
     }
 }
 
-@media screen and (max-width: 285px) and (max-height: 690px) {
-    .container {
-        overflow-y: scroll !important;
+// @media screen and (max-width: 285px) and (max-height: 690px) {
+//     .container {
+//         overflow-y: scroll !important;
 
-        &.contact-page {
-            .text-zone {
-                position: relative;
-                top: -15vh;
-                left: -0.5rem !important;
+//         &.contact-page {
+//             .text-zone {
+//                 position: relative;
+//                 top: -15vh;
+//                 left: -0.5rem !important;
 
-                h1 {
-                    left: 0;
-                    width: 70vw;
-                }
+//                 h1 {
+//                     left: 0;
+//                     width: 70vw;
+//                 }
 
 
-                p {
-                    line-height: 18px;
-                    width: 40vw;
-                }
+//                 p {
+//                     line-height: 18px;
+//                     width: 40vw;
+//                 }
 
-                .contact-form{
-                    width: 103%;
+//                 .contact-form{
+//                     width: 103%;
 
-                    form{
-                        width: 110%;
-                    }
-                }
-            }
-        }
-    }
+//                     form{
+//                         width: 110%;
+//                     }
+//                 }
+//             }
+//         }
+//     }
 
-    .map-wrap {
-        top: 35% !important;
-        // margin: 143% 0%;
-        right: 0rem;
-        width: 55% !important;
-        height: 30%;
-    }
+//     .map-wrap {
+//         top: 35% !important;
+//         // margin: 143% 0%;
+//         right: 0rem;
+//         width: 55% !important;
+//         height: 30%;
+//     }
 
-    .info-map {
-        display: none;
-    }
-}
+//     .info-map {
+//         display: none;
+//     }
+// }
 
 // @media screen and (max-height: 915px) and (min-height: 690px) {
 //     .container {

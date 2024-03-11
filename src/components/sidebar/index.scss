@@ -10,6 +10,7 @@
     .logo {
         display: block;
         padding: 8px 0;
+        width: fit-content;
 
         img {
             display: block;
@@ -96,11 +97,11 @@
             }
         }
 
-        .linkedin-icon::after{
+        .linkedin-icon::after {
             content: 'LinkedIn' !important;
         }
 
-        .git-icon::after{
+        .git-icon::after {
             content: 'GitHub' !important;
         }
 
@@ -119,7 +120,7 @@
         list-style: none;
         text-align: center;
         margin: 0;
-        
+
         li {
             height: 2rem;
             padding: 7px 0;
@@ -164,11 +165,11 @@
             &.mobile-show {
                 display: block;
 
-                .git-icon::after{
+                .git-icon::after {
                     content: 'GitHub' !important;
                 }
 
-                .linkedin-icon::after{
+                .linkedin-icon::after {
                     content: 'LinkedIn' !important;
                 }
             }
@@ -203,9 +204,11 @@
 
 @media screen and (max-width: 500px) {
     .nav-bar {
-        background: transparent;
-        position: initial;
-        height: 20vh;
+        position: relative;
+        overflow: hidden;
+        height: 14vh;
+        background-color: #181818;
+        width: 103vw;
 
         nav {
             display: none;
@@ -223,58 +226,138 @@
 
             &.mobile-show {
                 display: block;
+                top: 6.1rem;
+                height: 10%;
+                animation: fadeInRight 1s forwards;
 
-                .git-icon::after{
-                    content: 'GitHub' !important;
+                ul {
+                    li {
+                        a {
+                            display: none !important;
+                        }
+                    }
                 }
+            }
 
-                .linkedin-icon::after{
-                    content: 'LinkedIn' !important;
+            &.laptop-show {
+                display: block;
+                top: 6.1rem;
+                height: 10%;
+                animation: fadeOutLeft 1s forwards;
+
+                ul {
+                    li {
+                        a {
+                            display: none !important;
+                        }
+                    }
                 }
             }
 
             a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                color: #4d4d4e;
+                top: 0.5rem;
+                width: 5rem;
+                left: 5px;
+                display: inline-block !important;
+
+                i {
+                    transition: all 0.3s ease-out;
+                }
+
+                &:hover {
+                    color: #ffd700;
+
+                    svg {
+                        opacity: 0;
+                    }
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    font-size: 9px;
+                    letter-spacing: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 0;
+                    transition: all 0.3s ease-out;
+                }
+
+                &:first-child {
+                    &::after {
+                        content: 'HOME';
+                    }
+                }
             }
 
-            a:after {
-                opacity: 1;
-                position: initial;
-                width: auto;
-                margin-left: 10PX;
+            .about-link {
+                &:after {
+                    content: 'ABOUT';
+                }
             }
+
+            .mywork-link {
+                &:after {
+                    content: 'MY WORK';
+                }
+            }
+
+            .contact-link {
+                &:after {
+                    content: 'CONTACT';
+                }
+            }
+
+            // a {
+            //     display: inline-block !important;
+
+            // }
+
+            // a:after {
+            //     opacity: 1;
+            //     position: initial;
+            //     width: auto;
+            //     margin-left: 10PX;
+            // }
 
             a svg {
                 opacity: 1 !important;
             }
         }
 
-        .hamburger-icon,
+        .hamburger-icon {
+            top: 2rem;
+            right: 0.3rem !important;
+        }
+
         .close-icon {
-            position: absolute;
-            top: 15px;
-            right: 5px;
-            display: block;
+            top: 2rem;
+            right: 0.3rem !important;
         }
     }
 }
 
 @media screen and (max-width: 950px) {
-    .hamburger-icon{
+    .hamburger-icon {
         right: 1rem !important;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .hamburger-icon{
+    .hamburger-icon {
         right: -1.5rem !important;
     }
 }
 
 @media screen and (max-width: 650px) {
-    .solid-logo-img{
+    .solid-logo-img {
         animation: rotateIn 1s linear both;
         animation-delay: 1.4s;
         opacity: 0;

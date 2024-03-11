@@ -88,7 +88,7 @@ const Contact = () => {
                     <span>gujarnayan8@gmail.com</span>
                 </div>
                 <div className='map-wrap'>
-                    <MapContainer center={[18.5090360115654, 73.80504442795883]} zoom={13} scrollWheelZoom={true}>
+                    <MapContainer center={[18.5090360115654, 73.80504442795883]} zoom={13} scrollWheelZoom={false}>
                         <TileLayer
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
