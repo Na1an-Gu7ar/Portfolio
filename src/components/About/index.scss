@@ -162,10 +162,10 @@
     
     .cubespinner {
         animation: spincube 12s linear infinite;
-        position: absolute;
+        position: fixed;
         // left: 100%; 
         width: 100%;
-        height: 30% !important;
+        height: 20% !important;
         // height: 100%;
         overflow: hidden;
         text-align: center;
@@ -174,7 +174,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 15vh;
+            // height: 15vh;
             width: 50%;
             font-size: 40px !important;
         }
@@ -182,19 +182,20 @@
     
     .cubespinner2 {
         // height: 100%;
-        height: 30% !important;
+        position: fixed;
+        height: 20% !important;
         animation-delay: 6s;
         text-align: center;
     }
     
     .cubespinner3 {
         animation: spincube2 12s linear infinite;
-        position: absolute;
+        position: fixed;
         // left: 100%;
         width: 100%;
-        height: 30% !important;
+        height: 20% !important;
         // height: 100%;
-        bottom: 11rem;
+        bottom: 1rem;
         overflow: hidden;
         text-align: center;
         
@@ -210,11 +211,11 @@
     
     .cubespinner4 {
         width: 100%;
-        height: 30% !important;
+        height: 20% !important;
         // height: 100%;
         animation-delay: 6s;
         text-align: center;
-        position: absolute;
+        position: fixed;
     }
 }
 
@@ -267,6 +268,7 @@
             width: 100vw;
             height: 100vh;
             left: 2rem;
+            top: 0;
             
             .text-zone {
                 top: 0;
@@ -364,10 +366,10 @@
             }
     
             .stage-cube-cont {
-                height: 50vh !important;
+                position: absolute;
                 min-width: 70vw;
                 right: 5rem;
-                bottom: -23rem;
+                top: 30rem;
             }
         }
     }

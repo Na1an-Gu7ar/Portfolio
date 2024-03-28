@@ -2,7 +2,7 @@ import React from 'react'
 import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import Loader from 'react-loaders'
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 const MyWork = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -23,6 +23,11 @@ const MyWork = () => {
                             idx={15}
                         />
                     </h1>
+                    <div className="workbox">
+                        <div className="box1">
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
             <Loader type="line-scale-pulse-out" />
