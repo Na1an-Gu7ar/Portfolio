@@ -202,11 +202,11 @@
     }
 }
 
-@media screen and (max-width: 500px), (max-height: 950px) {
+@media screen and (max-width: 500px) and (max-height: 950px) {
     .nav-bar {
         position: relative;
         overflow: hidden;
-        height: 11vh;
+        height: 11.5vh;
         background-color: #181818;
         width: 103vw;
 
