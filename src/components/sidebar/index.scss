@@ -192,12 +192,19 @@
             }
         }
 
-        .hamburger-icon,
-        .close-icon {
+        .hamburger-icon{
             position: absolute;
             top: 15px;
             right: 5px;
             display: block;
+        }
+        
+        .close-icon{
+            position: absolute;
+            top: 15px;
+            right: 5px;
+            display: block;
+            z-index: 2;
         }
     }
 }
@@ -333,6 +340,134 @@
 }
 
 @media screen and (max-width: 950px) {
+    .nav-bar {
+        position: relative;
+        overflow: hidden;
+        height: 11.5vh;
+        background-color: #181818;
+        width: 103vw;
+
+        nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #181818;
+            height: 100%;
+            margin: 0;
+            z-index: 2;
+            position: fixed;
+
+            &.mobile-show {
+                display: block;
+                top: 4.5rem;
+                height: 8%;
+                animation: fadeInRight 1s forwards;
+
+                ul {
+                    li {
+                        a {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            &.laptop-show {
+                display: block;
+                top: 4.5rem;
+                height: 8%;
+                animation: fadeOutLeft 1s forwards;
+
+                ul {
+                    li {
+                        a {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: #4d4d4e;
+                top: 0.5rem;
+                width: 5rem;
+                left: 5px;
+                display: inline-block !important;
+
+                i {
+                    transition: all 0.3s ease-out;
+                }
+
+                &:hover {
+                    color: #ffd700;
+
+                    svg {
+                        opacity: 0;
+                    }
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    font-size: 9px;
+                    letter-spacing: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 0;
+                    transition: all 0.3s ease-out;
+                }
+
+                &:first-child {
+                    &::after {
+                        content: 'HOME';
+                    }
+                }
+            }
+
+            .about-link {
+                &:after {
+                    content: 'ABOUT';
+                }
+            }
+
+            .mywork-link {
+                &:after {
+                    content: 'MY WORK';
+                }
+            }
+
+            .contact-link {
+                &:after {
+                    content: 'CONTACT';
+                }
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+        }
+
+        .hamburger-icon {
+            top: 2rem;
+            right: 0.3rem !important;
+        }
+
+        .close-icon {
+            top: 2rem;
+            right: 0.3rem !important;
+        }
+    }
+
     .hamburger-icon {
         right: 1rem !important;
     }
@@ -345,6 +480,134 @@
 }
 
 @media screen and (max-width: 650px) {
+    .nav-bar {
+        position: relative;
+        overflow: hidden;
+        height: 11.5vh;
+        background-color: #181818;
+        width: 103vw;
+
+        nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #181818;
+            height: 100%;
+            margin: 0;
+            z-index: 2;
+            position: fixed;
+
+            &.mobile-show {
+                display: block;
+                top: 4.5rem;
+                height: 8%;
+                animation: fadeInRight 1s forwards;
+
+                ul {
+                    li {
+                        a {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            &.laptop-show {
+                display: block;
+                top: 4.5rem;
+                height: 8%;
+                animation: fadeOutLeft 1s forwards;
+
+                ul {
+                    li {
+                        a {
+                            display: none !important;
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: #4d4d4e;
+                top: 0.5rem;
+                width: 5rem;
+                left: 5px;
+                display: inline-block !important;
+
+                i {
+                    transition: all 0.3s ease-out;
+                }
+
+                &:hover {
+                    color: #ffd700;
+
+                    svg {
+                        opacity: 0;
+                    }
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    font-size: 9px;
+                    letter-spacing: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 0;
+                    transition: all 0.3s ease-out;
+                }
+
+                &:first-child {
+                    &::after {
+                        content: 'HOME';
+                    }
+                }
+            }
+
+            .about-link {
+                &:after {
+                    content: 'ABOUT';
+                }
+            }
+
+            .mywork-link {
+                &:after {
+                    content: 'MY WORK';
+                }
+            }
+
+            .contact-link {
+                &:after {
+                    content: 'CONTACT';
+                }
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+        }
+
+        .hamburger-icon {
+            top: 2rem;
+            right: 0.3rem !important;
+        }
+
+        .close-icon {
+            top: 2rem;
+            right: 0.3rem !important;
+        }
+    }
+
     .solid-logo-img {
         animation: rotateIn 1s linear both;
         animation-delay: 1.4s;
