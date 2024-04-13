@@ -92,7 +92,7 @@ h2 {
         position: initial;
         width: 100%;
         transform: none;
-        padding: 10px;
+        padding: 20px 5px;
         box-sizing: border-box;
     }
 
@@ -116,10 +116,10 @@ h2 {
 
     .logo-container svg {
         position: absolute;
-        top: 11rem;
+        top: 19rem;
         right: auto;
         bottom: auto;
-        left: -0.1rem;
+        left: 5rem;
         margin: auto;
     }
 
@@ -129,13 +129,37 @@ h2 {
 }
 
 @media screen and (max-width: 950px) {
+    .home-page{
+        top: 15rem;
+    }
+
     .svg-container {
         transform: scale(11) translate(7px, 18px) !important;
     }
 
     .logo-container svg {
         position: absolute;
-        top: 7rem;
+        top: 12rem;
+        right: auto;
+        height: 60% !important;
+        bottom: auto;
+        left: 12.7rem;
+        width: 70% !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .home-page{
+        top: 0rem;
+    }
+
+    .svg-container {
+        transform: scale(11) translate(7px, 18px) !important;
+    }
+
+    .logo-container svg {
+        position: absolute;
+        top: -20rem;
         right: auto;
         height: 60% !important;
         bottom: auto;

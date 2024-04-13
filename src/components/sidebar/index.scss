@@ -162,8 +162,14 @@
             z-index: 2;
             position: fixed;
 
+
             &.mobile-show {
                 display: block;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 45%;
+                animation: fadeInDown 1s forwards;
 
                 .git-icon::after {
                     content: 'GitHub' !important;
@@ -174,32 +180,60 @@
                 }
             }
 
-            a {
-                display: flex !important;
-                justify-content: center !important;
-                align-items: center !important;
+            &.laptop-show {
+                display: block;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 45%;
+                animation: fadeOutUp 1s forwards;
             }
+
+            // a {
+            //     display: flex !important;
+            //     justify-content: center !important;
+            //     align-items: center !important;
+            //     // left: 29rem;
+            //     width: 20%;
+            //     top: -3rem;
+            // }
+
+            // ul{
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     flex-direction: column;
+            //     li{
+            //         a{
+            //             top: 6rem;
+            //             width: 20%;
+            //         }
+            //     }
+            // }
 
             a:after {
                 opacity: 1;
                 position: initial;
                 width: auto;
-                margin-left: 10PX;
+                margin-left: 100px;
+                margin-top: -50px;
             }
 
             a svg {
+                position: relative;
+                top: 0rem;
                 opacity: 1 !important;
             }
         }
 
-        .hamburger-icon{
+        .hamburger-icon {
             position: absolute;
             top: 15px;
             right: 5px;
             display: block;
         }
-        
-        .close-icon{
+
+        .close-icon {
             position: absolute;
             top: 15px;
             right: 5px;
@@ -348,10 +382,6 @@
         width: 103vw;
 
         nav {
-            display: none;
-        }
-
-        nav {
             width: 100%;
             top: 0;
             left: 0;
@@ -361,70 +391,102 @@
             z-index: 2;
             position: fixed;
 
+            ul{
+                display: none;
+            }
+
             &.mobile-show {
                 display: block;
                 top: 4.5rem;
                 height: 8%;
                 animation: fadeInRight 1s forwards;
 
-                ul {
-                    li {
-                        a {
-                            display: none !important;
+                a {
+                    color: #4d4d4e;
+                    top: 0.5rem;
+                    width: 5rem;
+                    left: 5px;
+                    display: inline-block !important;
+
+                    i {
+                        transition: all 0.3s ease-out;
+                    }
+
+                    &:hover {
+                        color: #ffd700;
+
+                        svg {
+                            opacity: 0;
+                        }
+
+                        &:after {
+                            opacity: 1;
                         }
                     }
-                }
-            }
 
-            &.laptop-show {
-                display: block;
-                top: 4.5rem;
-                height: 8%;
-                animation: fadeOutLeft 1s forwards;
+                    nav {
 
-                ul {
-                    li {
-                        a {
-                            display: none !important;
+                        .about-link {
+                            &:after {
+                                content: 'ABOUT';
+                            }
+                        }
+
+                        .mywork-link {
+                            &:after {
+                                content: 'MY WORK';
+                            }
+                        }
+
+                        .contact-link {
+                            &:after {
+                                content: 'CONTACT';
+                            }
+                        }
+
+                        .active {
+                            svg {
+                                color: #ffd700;
+                            }
                         }
                     }
-                }
-            }
 
-            a {
-                color: #4d4d4e;
-                top: 0.5rem;
-                width: 5rem;
-                left: 5px;
-                display: inline-block !important;
+                    .about-link {
+                        &:after {
+                            content: 'ABOUT';
+                        }
+                    }
 
-                i {
-                    transition: all 0.3s ease-out;
-                }
+                    .mywork-link {
+                        &:after {
+                            content: 'MY WORK';
+                        }
+                    }
 
-                &:hover {
-                    color: #ffd700;
+                    .contact-link {
+                        &:after {
+                            content: 'CONTACT';
+                        }
+                    }
 
-                    svg {
-                        opacity: 0;
+                    a svg {
+                        opacity: 1 !important;
                     }
 
                     &:after {
-                        opacity: 1;
+                        content: '';
+                        font-size: 9px;
+                        letter-spacing: 2px;
+                        position: absolute;
+                        bottom: 0;
+                        display: contents;
+                        margin-left: 10px !important;
+                        // margin-top: 30px;
+                        // line-height: 2;
+                        text-align: center;
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
                     }
-                }
-
-                &:after {
-                    content: '';
-                    font-size: 9px;
-                    letter-spacing: 2px;
-                    position: absolute;
-                    bottom: 0;
-                    display: block;
-                    width: 100%;
-                    text-align: center;
-                    opacity: 0;
-                    transition: all 0.3s ease-out;
                 }
 
                 &:first-child {
@@ -434,48 +496,80 @@
                 }
             }
 
-            .about-link {
-                &:after {
-                    content: 'ABOUT';
+            &.laptop-show {
+                display: block;
+                top: 4.5rem;
+                height: 8%;
+                animation: fadeOutLeft 1s forwards;
+    
+                a {
+                    color: #4d4d4e;
+                    top: 0.5rem;
+                    width: 5rem;
+                    left: 5px;
+                    display: inline-block !important;
+    
+                    i {
+                        transition: all 0.3s ease-out;
+                    }
+    
+                    &:hover {
+                        color: #ffd700;
+    
+                        svg {
+                            opacity: 0;
+                        }
+    
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+    
+                    &:after {
+                        content: '';
+                        font-size: 9px;
+                        letter-spacing: 2px;
+                        position: absolute;
+                        bottom: 0;
+                        display: block;
+                        margin-left: 10px;
+                        // margin-top: 10px !important;
+                        // line-height: 2;
+                        text-align: center;
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
+                    }
+    
+                    &:first-child {
+                        &::after {
+                            content: 'HOME';
+                        }
+                    }
+    
                 }
-            }
-
-            .mywork-link {
-                &:after {
-                    content: 'MY WORK';
-                }
-            }
-
-            .contact-link {
-                &:after {
-                    content: 'CONTACT';
-                }
-            }
-
-            a svg {
-                opacity: 1 !important;
             }
         }
 
-        .hamburger-icon {
-            top: 2rem;
-            right: 0.3rem !important;
-        }
-
-        .close-icon {
-            top: 2rem;
-            right: 0.3rem !important;
-        }
     }
 
     .hamburger-icon {
-        right: 1rem !important;
+        top: 2rem;
+        right: 0.3rem !important;
     }
+
+    .close-icon {
+        top: 2rem;
+        right: 0.3rem !important;
+    }
+}
+
+.hamburger-icon {
+    right: 0.5rem !important;
 }
 
 @media screen and (max-width: 800px) {
     .hamburger-icon {
-        right: -1.5rem !important;
+        right: 0.5rem !important;
     }
 }
 
@@ -507,11 +601,64 @@
                 height: 8%;
                 animation: fadeInRight 1s forwards;
 
-                ul {
-                    li {
-                        a {
-                            display: none !important;
+                a {
+                    color: #4d4d4e;
+                    top: 0.5rem;
+                    width: 5rem;
+                    left: 5px;
+                    display: inline-block !important;
+    
+                    i {
+                        transition: all 0.3s ease-out;
+                    }
+    
+                    &:hover {
+                        color: #ffd700;
+    
+                        svg {
+                            opacity: 0;
                         }
+    
+                        &:after {
+                            opacity: 1;
+                        }
+
+                        &:first-child {
+                            &::after {
+                                content: 'HOME';
+                            }
+                        }
+
+                        &:nth-child(2) {
+                            &::after{
+                                content: 'ABOUT';
+                            }
+                        }
+
+                        &:nth-child(3) {
+                            &::after{
+                                content: 'MY WORK';
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            &::after{
+                                content: 'CONTACT';
+                            }
+                        }
+                    }
+    
+                    &:after {
+                        content: '';
+                        font-size: 9px;
+                        letter-spacing: 2px;
+                        position: absolute;
+                        bottom: 0;
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        opacity: 0;
+                        transition: all 0.3s ease-out;
                     }
                 }
             }
@@ -521,79 +668,6 @@
                 top: 4.5rem;
                 height: 8%;
                 animation: fadeOutLeft 1s forwards;
-
-                ul {
-                    li {
-                        a {
-                            display: none !important;
-                        }
-                    }
-                }
-            }
-
-            a {
-                color: #4d4d4e;
-                top: 0.5rem;
-                width: 5rem;
-                left: 5px;
-                display: inline-block !important;
-
-                i {
-                    transition: all 0.3s ease-out;
-                }
-
-                &:hover {
-                    color: #ffd700;
-
-                    svg {
-                        opacity: 0;
-                    }
-
-                    &:after {
-                        opacity: 1;
-                    }
-                }
-
-                &:after {
-                    content: '';
-                    font-size: 9px;
-                    letter-spacing: 2px;
-                    position: absolute;
-                    bottom: 0;
-                    display: block;
-                    width: 100%;
-                    text-align: center;
-                    opacity: 0;
-                    transition: all 0.3s ease-out;
-                }
-
-                &:first-child {
-                    &::after {
-                        content: 'HOME';
-                    }
-                }
-            }
-
-            .about-link {
-                &:after {
-                    content: 'ABOUT';
-                }
-            }
-
-            .mywork-link {
-                &:after {
-                    content: 'MY WORK';
-                }
-            }
-
-            .contact-link {
-                &:after {
-                    content: 'CONTACT';
-                }
-            }
-
-            a svg {
-                opacity: 1 !important;
             }
         }
 
