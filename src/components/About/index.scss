@@ -468,13 +468,21 @@
                 right: 5rem;
                 top: 8rem;
 
+                .cubespinner{
+                    bottom: 6rem;
+                }
+
+                .cubespinner2{
+                    bottom: 6rem;
+                }
+
                 .cubespinner3{
                     left: 0;
-                    bottom: 4rem;
+                    bottom: 2rem;
                     // position: relative;
                 }
                 .cubespinner4{
-                    bottom: 4rem;
+                    bottom: 2rem;
                     left: 0;
                     // position: relative;
                 }
@@ -516,7 +524,15 @@
                 position: absolute;
                 min-width: 70vw;
                 right: 5rem;
-                top: 21rem !important;
+                top: 23rem !important;
+
+                .cubespinner{
+                    bottom: 7rem;
+                }
+
+                .cubespinner2{
+                    bottom: 7rem;
+                }
 
                 .cubespinner3{
                     left: 0;

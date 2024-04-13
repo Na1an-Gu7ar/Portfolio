@@ -75,7 +75,7 @@ const About = () => {
                             <FontAwesomeIcon icon={faNodeJs} color="green" bounce></FontAwesomeIcon>
                         </div>
                         <div className='face5'>
-                            <FontAwesomeIcon icon={faGitAlt} color="green" bounce></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faGitAlt} color="#f15234" beat></FontAwesomeIcon>
                         </div>
                     </div>
                     <div className='cubespinner3 cubespinner4'>
@@ -89,7 +89,7 @@ const About = () => {
                             <FontAwesomeIcon icon={faNodeJs} color="green" shake></FontAwesomeIcon>
                         </div>
                         <div className='face5'>
-                            <FontAwesomeIcon icon={faGitAlt} color="#EFD81D" beat></FontAwesomeIcon>
+                            <FontAwesomeIcon icon={faGitAlt} color="#f15234" beat></FontAwesomeIcon>
                         </div>
                     </div>
                 </div>
