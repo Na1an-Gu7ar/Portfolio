@@ -38,64 +38,64 @@ const MyWork = () => {
     const box3Ref = useRef()
     const box4Ref = useRef()
 
-    useGSAP(() => {
-        gsap.fromTo(box1Ref.current, {
-            x: 300,
-            duration: 1.5,
-            delay: 0.5,
-            stagger: 3.5,
-            opacity: 0
+    // useGSAP(() => {
+    //     gsap.fromTo(box1Ref.current, {
+    //         x: 300,
+    //         duration: 1.5,
+    //         delay: 0.5,
+    //         stagger: 3.5,
+    //         opacity: 0
             
-        }, {
-            x: 0,
-            duration: 1.5,
-            delay: 0.5,
-            stagger: 3.5,
-            opacity: 1
-        })
-        gsap.fromTo(box2Ref.current, {
-            x: 390,
-            duration: 1.5,
-            delay: 1,
-            stagger: 3.5,
-            opacity: 0
+    //     }, {
+    //         x: 0,
+    //         duration: 1.5,
+    //         delay: 0.5,
+    //         stagger: 3.5,
+    //         opacity: 1
+    //     })
+    //     gsap.fromTo(box2Ref.current, {
+    //         x: 390,
+    //         duration: 1.5,
+    //         delay: 1,
+    //         stagger: 3.5,
+    //         opacity: 0
             
-        }, {
-            x: 0,
-            duration: 1.4,
-            delay: 0.5,
-            stagger: 3.5,
-            opacity: 1
-        })
-        gsap.fromTo(box3Ref.current, {
-            x: 380,
-            duration: 1.4,
-            delay: 0.5,
-            stagger: 3.5,
-            opacity: 0
+    //     }, {
+    //         x: 0,
+    //         duration: 1.4,
+    //         delay: 0.5,
+    //         stagger: 3.5,
+    //         opacity: 1
+    //     })
+    //     gsap.fromTo(box3Ref.current, {
+    //         x: 380,
+    //         duration: 1.4,
+    //         delay: 0.5,
+    //         stagger: 3.5,
+    //         opacity: 0
             
-        }, {
-            x: 0,
-            duration: 1.3,
-            delay: 0.5,
-            stagger: 3.5,
-            opacity: 1
-        })
-        gsap.fromTo(box4Ref.current, {
-            x: 400,
-            duration: 1.3,
-            delay: 0.5,
-            stagger: 3.5,
-            opacity: 0
+    //     }, {
+    //         x: 0,
+    //         duration: 1.3,
+    //         delay: 0.5,
+    //         stagger: 3.5,
+    //         opacity: 1
+    //     })
+    //     gsap.fromTo(box4Ref.current, {
+    //         x: 400,
+    //         duration: 1.3,
+    //         delay: 0.5,
+    //         stagger: 3.5,
+    //         opacity: 0
             
-        }, {
-            x: 0,
-            duration: 1.2,
-            delay: 0.5,
-            stagger: 3.5,
-            opacity: 1
-        })
-    })
+    //     }, {
+    //         x: 0,
+    //         duration: 1.2,
+    //         delay: 0.5,
+    //         stagger: 3.5,
+    //         opacity: 1
+    //     })
+    // })
 
     return (
         <>
@@ -123,7 +123,7 @@ const MyWork = () => {
                                 <span>Description -</span> A full-stack pinterest clone where you have to register yourself or login if you are already registered. Then you can access profile, feed etc
                             </div>
                         </div>
-                        <div ref={box2Ref} className="box1">
+                        {/* <div ref={box2Ref} className="box1">
                             <div className="prj-img">
                                 <img src="https://i.pinimg.com/originals/26/8c/0c/268c0cc8f5725a4b2b126f97dbdaee12.png" alt="PinterestClone" />
                             </div>
@@ -164,7 +164,7 @@ const MyWork = () => {
                             <div className='description'>
                                 <span>Description -</span> Participated in Webathon2.0 build an E-learning website like udemy, which contains courses on in demand technical skills.
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <Loader type="line-scale-pulse-out" />
