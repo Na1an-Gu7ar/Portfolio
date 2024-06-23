@@ -4,6 +4,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCss3, faGitAlt, faHtml5, faJava, faJs, faNodeJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
+import 'ldrs/zoomies'
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -94,7 +95,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Loader type="line-scale-pulse-out" />
+            {/* <Loader type="line-scale-pulse-out" /> */}
+            <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/>
         </>
     )
 }

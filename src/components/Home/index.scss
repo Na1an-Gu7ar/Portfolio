@@ -50,6 +50,20 @@
     }
 }
 
+l-zoomies {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    animation: fadeOutRight 1s 1s;
+    animation-fill-mode: forwards;
+}
+
 h2 {
     color: #8d8d8d;
     margin-top: 20px;
@@ -129,7 +143,7 @@ h2 {
 }
 
 @media screen and (max-width: 950px) {
-    .home-page{
+    .home-page {
         top: 15rem;
     }
 
@@ -149,7 +163,7 @@ h2 {
 }
 
 @media screen and (max-width: 750px) {
-    .home-page{
+    .home-page {
         top: 0rem;
     }
 
@@ -173,10 +187,10 @@ h2 {
         display: none;
     }
 
-    .text-zone{
+    .text-zone {
         position: absolute !important;
         top: 5rem !important;
-    } 
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -184,14 +198,14 @@ h2 {
         display: none;
     }
 
-    .text-zone{
+    .text-zone {
         position: absolute !important;
         top: 5rem !important;
         left: -0.6rem !important;
         width: 110vw !important;
 
-        h1{
+        h1 {
             font-size: 45px;
         }
-    } 
+    }
 }

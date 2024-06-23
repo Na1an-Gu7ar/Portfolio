@@ -6,6 +6,7 @@ import Loader from 'react-loaders'
 import emailjs from '@emailjs/browser'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { Icon } from 'leaflet'
+import 'ldrs/zoomies'
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -102,7 +103,8 @@ const Contact = () => {
                     </MapContainer>
                 </div>
             </div>
-            <Loader type='line-scale-pulse-out' />
+            {/* <Loader type='line-scale-pulse-out' /> */}
+            <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/>
         </>
     )
 }

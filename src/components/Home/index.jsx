@@ -6,6 +6,7 @@ import AnimatedLetters from '../AnimatedLetters'
 import LogoN from '../../assets/images/logo-N.png'
 import Logo from './Logo'
 import Loader from 'react-loaders'
+import 'ldrs/zoomies'
 
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -39,7 +40,8 @@ const Home = () => {
                 </div>
                 <Logo />
             </div>
-            <Loader type='line-scale-pulse-out' />
+            {/* <Loader type='line-scale-pulse-out' /> */}
+            <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/>
         </>
     )
 }

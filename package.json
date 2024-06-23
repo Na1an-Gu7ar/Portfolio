@@ -17,6 +17,7 @@
     "@gsap/react": "^2.1.1",
     "animate.css": "^4.1.1",
     "gsap": "^3.12.5",
+    "ldrs": "^1.0.2",
     "leaflet": "^1.9.4",
     "loaders.css": "^0.1.2",
     "react": "^18.2.0",

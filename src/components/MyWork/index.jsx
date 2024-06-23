@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ieducate from '../../assets/images/ieducate.png'
+import 'ldrs/zoomies'
 
 
 const MyWork = () => {
@@ -140,66 +141,11 @@ const MyWork = () => {
                                 </div>
                             )
                         })}
-                        {/* <div ref={box1Ref} className="box1">
-                            <div className="prj-img">
-                                <img src="https://i.pinimg.com/originals/26/8c/0c/268c0cc8f5725a4b2b126f97dbdaee12.png" alt="PinterestClone" />
-                            </div>
-                            <div className='title'>
-                                Pinterest Clone
-                            </div>
-                            <div className='tech-stack'>
-                                Ejs, Express, Nodejs, MongoDB
-                            </div>
-                            <div className='description'>
-                                A full-stack pinterest clone where you have to register yourself or login if you are already registered. Then you can access profile, feed etc
-                            </div>
-                        </div>
-                        <div ref={box2Ref} className="box1">
-                            <div className="prj-img">
-                                <h2 className="h2"><span>i</span><span>Educate</span></h2>
-                            </div>
-                            <div className='title'>
-                                IEducate
-                            </div>
-                            <div className='tech-stack'>
-                                HTML, CSS, JS, Bootstrap
-                            </div>
-                            <div className='description'>
-                                Participated in Webathon2.0 build an E-learning website like udemy, which contains courses on in demand technical skills.
-                            </div>
-                        </div>
-                        <div ref={box3Ref} className="box1">
-                            <div className="prj-img">
-                                <img style={{ height: '35vh', top: '4rem' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" alt="InstagramClone" />
-                            </div>
-                            <div className='title'>
-                                Insta Clone
-                            </div>
-                            <div className='tech-stack'>
-                                Ejs, Nodejs, Express, MongooDb
-                            </div>
-                            <div className='description'>
-                                An full stack insta clone where you have to login or signup, then you can access feeds and view or update you ownprofile
-                            </div>
-                        </div>
-                        <div ref={box4Ref} className="box1">
-                            <div className="prj-img">
-                                <img src="https://i.pinimg.com/originals/26/8c/0c/268c0cc8f5725a4b2b126f97dbdaee12.png" alt="PinterestClone" />
-                            </div>
-                            <div className='title'>
-                                IEducate
-                            </div>
-                            <div className='tech-stack'>
-                                HTML CSS JS Bootstrap
-                            </div>
-                            <div className='description'>
-                                Participated in Webathon2.0 build an E-learning website like udemy, which contains courses on in demand technical skills.
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </div>
-            <Loader type="line-scale-pulse-out" />
+            {/* <Loader type="line-scale-pulse-out" /> */}
+            <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/>
         </>
     )
 }
