@@ -95,8 +95,8 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            {/* <Loader type="line-scale-pulse-out" /> */}
-            <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/>
+            <Loader type="line-scale-pulse-out" />
+            {/* <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/> */}
         </>
     )
 }
