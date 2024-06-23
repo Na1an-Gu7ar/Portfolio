@@ -3,7 +3,6 @@ import './index.scss'
 import AnimatedLetters from '../AnimatedLetters'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCss3, faGitAlt, faHtml5, faJava, faJs, faNodeJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
-import Loader from 'react-loaders'
 import 'ldrs/zoomies'
 
 const About = () => {
