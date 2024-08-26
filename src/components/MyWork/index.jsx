@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import ieducate from '../../assets/images/ieducate.png'
+import NewsApp from '../../assets/images/NewsApp.png'
 import 'ldrs/zoomies'
 
 
@@ -102,7 +103,7 @@ const MyWork = () => {
         },
         {
             id: 4,
-            imgUrl: ieducate,
+            imgUrl: NewsApp,
             title: "NewsApp",
             techStack: "React, Bootstrap, NewsAPI",
             description: "Built an React application that displays news articles fetched from news api. Includes category filtering, pagination, search by keywords functionalities. Used Redux Toolkit for state management.",
