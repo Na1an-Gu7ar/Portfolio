@@ -100,6 +100,14 @@ const MyWork = () => {
             description: "Participated in Webathon2.0 build an E-learning website like udemy, which contains courses on in demand technical skills.",
             ref: box3Ref
         },
+        {
+            id: 4,
+            imgUrl: ieducate,
+            title: "NewsApp",
+            techStack: "React, Bootstrap, NewsAPI",
+            description: "Built an React application that displays news articles fetched from news api. Includes category filtering, pagination, search by keywords functionalities. Used Redux Toolkit for state management.",
+            ref: box4Ref
+        },
     ]
 
     const [letterClass, setLetterClass] = useState('text-animate')
