@@ -22,15 +22,15 @@ const Home = () => {
 
     return (
         <motion.div 
-        initial={{x: "100%"}}
-        animate={{x: "0%"}}
-        transition={{duration: 0.5, ease: "easeOut"}}
+        initial={{y: "100%"}}
+        animate={{y: "0%"}}
+        transition={{duration: 0.5, ease: "easeOut", type: "spring"}}
         exit={{opacity: 1}}
         >
             <div className='container home-page'>
                 <div className='text-zone'>
                     <h1>
-                        <span className={letterClass}>H</span>
+                        <span className={`${letterClass}_11`}>H</span>
                         <span className={`${letterClass} _12`}>i,</span>
                         <br />
                         <span className={`${letterClass} _13`}>I</span>

@@ -18,9 +18,9 @@ const About = () => {
 
     return (
         <motion.div
-        initial={{x: "100%"}}
-        animate={{x: "0%"}}
-        transition={{duration: 0.5, ease: "easeOut"}}
+        initial={{y: "100%"}}
+        animate={{y: "0%"}}
+        transition={{duration: 0.8, ease: "easeOut", type: "spring"}}
         exit={{opacity: 1}}>
             <div className='container about-page'>
                 <div className='text-zone'>

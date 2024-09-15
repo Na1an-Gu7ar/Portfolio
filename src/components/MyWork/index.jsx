@@ -22,56 +22,56 @@ const MyWork = () => {
         gsap.fromTo(box1Ref.current, {
             x: 300,
             duration: 1.3,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 0
 
         }, {
             x: 0,
             duration: 1.3,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 1
         })
         gsap.fromTo(box2Ref.current, {
             x: 291,
             duration: 1.3,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 0
 
         }, {
             x: 0,
             duration: 1.2,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 1
         })
         gsap.fromTo(box3Ref.current, {
             x: 280,
             duration: 1.2,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 0
 
         }, {
             x: 0,
             duration: 1.1,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 1
         })
         gsap.fromTo(box4Ref.current, {
             x: 270,
             duration: 1.1,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 0
 
         }, {
             x: 0,
             duration: 1,
-            delay: 1,
+            delay: 0.2,
             stagger: 3.5,
             opacity: 1
         })
@@ -123,9 +123,9 @@ const MyWork = () => {
 
     return (
         <motion.div
-        initial={{x: "100%"}}
-        animate={{x: "0%"}}
-        transition={{duration: 0.5, ease: "easeOut"}}
+        initial={{y: "100%"}}
+        animate={{y: "0%"}}
+        transition={{duration: 0.5, ease: "easeOut", type: "spring"}}
         exit={{opacity: 1}}>
             <div className='container about-page'>
                 <div className='text-zone prj-text-zone'>

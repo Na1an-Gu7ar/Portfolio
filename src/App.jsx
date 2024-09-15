@@ -10,7 +10,7 @@ import { AnimatePresence } from 'framer-motion'
 function App() {
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence initial={false}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
