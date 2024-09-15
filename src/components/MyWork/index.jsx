@@ -8,6 +8,7 @@ import gsap from 'gsap'
 import ieducate from '../../assets/images/ieducate.png'
 import NewsApp from '../../assets/images/NewsApp.png'
 import 'ldrs/zoomies'
+import {motion} from "framer-motion"
 
 
 const MyWork = () => {
@@ -121,7 +122,11 @@ const MyWork = () => {
 
 
     return (
-        <>
+        <motion.div
+        initial={{x: "100%"}}
+        animate={{x: "0%"}}
+        transition={{duration: 0.5, ease: "easeOut"}}
+        exit={{opacity: 1}}>
             <div className='container about-page'>
                 <div className='text-zone prj-text-zone'>
                     <h1 className='prj-h1'>
@@ -153,9 +158,9 @@ const MyWork = () => {
                     </div>
                 </div>
             </div>
-            <Loader type="line-scale-pulse-out" />
+            {/* <Loader type="line-scale-pulse-out" /> */}
             {/* <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/> */}
-        </>
+        </motion.div>
     )
 }
 

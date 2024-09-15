@@ -7,6 +7,7 @@ import emailjs from '@emailjs/browser'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import { Icon } from 'leaflet'
 import 'ldrs/zoomies'
+import {motion} from "framer-motion"
 
 const Contact = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -44,7 +45,11 @@ const Contact = () => {
         iconSize: [38, 38]
     })
     return (
-        <>
+        <motion.div
+        initial={{x: "100%"}}
+        animate={{x: "0%"}}
+        transition={{duration: 0.5, ease: "easeOut"}}
+        exit={{opacity: 1}}>
             <div className='container contact-page'>
                 <div className='text-zone'>
                     <h1>
@@ -103,9 +108,9 @@ const Contact = () => {
                     </MapContainer>
                 </div>
             </div>
-            <Loader type='line-scale-pulse-out' />
+            {/* <Loader type='line-scale-pulse-out' /> */}
             {/* <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/> */}
-        </>
+        </motion.div>
     )
 }
 

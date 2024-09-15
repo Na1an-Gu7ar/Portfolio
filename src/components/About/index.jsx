@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCss3, faGitAlt, faHtml5, faJava, faJs, faNodeJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import 'ldrs/zoomies'
+import {motion} from "framer-motion"
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -16,7 +17,11 @@ const About = () => {
     }, [])
 
     return (
-        <>
+        <motion.div
+        initial={{x: "100%"}}
+        animate={{x: "0%"}}
+        transition={{duration: 0.5, ease: "easeOut"}}
+        exit={{opacity: 1}}>
             <div className='container about-page'>
                 <div className='text-zone'>
                     <h1>
@@ -97,7 +102,7 @@ const About = () => {
             </div>
             <Loader type="line-scale-pulse-out" />
             {/* <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/> */}
-        </>
+        </motion.div>
     )
 }
 
