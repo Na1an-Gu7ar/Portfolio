@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCss3, faGitAlt, faHtml5, faJava, faJs, faNodeJs, faPython, faReact } from '@fortawesome/free-brands-svg-icons'
 import Loader from 'react-loaders'
 import 'ldrs/zoomies'
-import {motion} from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 
 const About = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -18,10 +18,10 @@ const About = () => {
 
     return (
         <motion.div
-        initial={{y: "100%"}}
-        animate={{y: "0%"}}
-        transition={{duration: 0.8, ease: "easeOut", type: "spring"}}
-        exit={{opacity: 1}}>
+            initial={{ x: "-100%" }}
+            animate={{ x: "0%" }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            exit={{ x: "-100%", opacity: 0 }}>
             <div className='container about-page'>
                 <div className='text-zone'>
                     <h1>
@@ -29,7 +29,7 @@ const About = () => {
                             letterClass={letterClass}
                             strArray={['A', 'b', 'o', 'u', 't', ' ', 'm', 'e']}
                             idx={15}
-                            />
+                        />
                     </h1>
                     <p>I'm a very ambitious front-end developer looking for a role in an
                         established IT company with the opportunity to work with the latest

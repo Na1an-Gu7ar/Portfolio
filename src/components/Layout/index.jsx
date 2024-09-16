@@ -2,6 +2,7 @@ import React from 'react'
 import './index.scss'
 import Sidebar from '../sidebar'
 import { Outlet } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 
 const Layout = () => {
     return (
@@ -9,9 +10,9 @@ const Layout = () => {
             <Sidebar />
             <div className='page'>
                 <span className='tags top-tags'>&lt;body&gt;</span>
-
-                <Outlet />
-
+                
+                    <Outlet />
+                
                 <span className='tags bottom-tags'>
                     &lt;/body&gt;
                     <br />
