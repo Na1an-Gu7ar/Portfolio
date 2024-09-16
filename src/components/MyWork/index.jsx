@@ -8,11 +8,11 @@ import gsap from 'gsap'
 import ieducate from '../../assets/images/ieducate.png'
 import NewsApp from '../../assets/images/NewsApp.png'
 import 'ldrs/zoomies'
-import {motion} from "framer-motion"
+import { motion } from "framer-motion"
 
 
 const MyWork = () => {
-    
+
     const box1Ref = useRef()
     const box2Ref = useRef()
     const box3Ref = useRef()
@@ -122,26 +122,29 @@ const MyWork = () => {
 
 
     return (
-        <motion.div
-        initial={{y: "100%"}}
-        animate={{y: "0%"}}
-        transition={{duration: 0.5, ease: "easeOut", type: "spring"}}
-        exit={{opacity: 1}}>
+        <div>
             <div className='container about-page'>
-                <div className='text-zone prj-text-zone'>
-                    <h1 className='prj-h1'>
+                <div className='text-zone prj-text-zone' style={{top: "58%"}}>
+                    <motion.h1 className='prj-h1'
+                        initial={{ y: "100%" }}
+                        animate={{ y: "0%" }}
+                        transition={{ duration: 0.8, ease: "easeInOut", type: 'spring' }}
+                        exit={{ y: "-100%", opacity: 0 }}
+                    >
                         <AnimatedLetters
                             letterClass={letterClass}
                             strArray={['M', 'y', '', 'W', 'o', 'r', 'k']}
                             idx={15}
                         />
-                    </h1>
+                    </motion.h1>
                     <div className="workbox">
                         {prjLst.map((lst) => {
                             return (
-                                <div ref={lst.ref} key={lst.id} className='box1'>
+                                <motion.div ref={lst.ref} key={lst.id} className='box1'
+                                    transition={{ duration: 1, ease: "easeInOut", type: 'spring' }}
+                                    exit={{ x: "-100%", opacity: 0 }}>
                                     <div className="prj-img">
-                                        <img src={lst.imgUrl} style={{ top: '4rem' }} alt={lst.title} />
+                                        <img src={lst.imgUrl} style={{ top: '2rem' }} alt={lst.title} />
                                     </div>
                                     <div className='title'>
                                         {lst.title}
@@ -152,7 +155,7 @@ const MyWork = () => {
                                     <div className='description'>
                                         {lst.description}
                                     </div>
-                                </div>
+                                </motion.div>
                             )
                         })}
                     </div>
@@ -160,7 +163,7 @@ const MyWork = () => {
             </div>
             {/* <Loader type="line-scale-pulse-out" /> */}
             {/* <l-zoomies size={80} stroke={3} speed={1.5} color="#fdd700" bg-opacity={0.2}/> */}
-        </motion.div>
+        </div>
     )
 }
 
