@@ -308,8 +308,23 @@
                     font-size: 45px;
                     width: 100vw;
 
+                    &::before {
+                        // line-height:5px;
+                        line-height: 15px;
+                        position: absolute;
+                        // left: -30px;
+                        top: -10px;
+                        margin-left: 6px;
+                        opacity: 0.6;
+                    }
                     &::after {
-                        line-height: 30px;
+                        // line-height:5px;
+                        line-height: 15px;
+                        position: absolute;
+                        // left: -30px;
+                        bottom: -13px;
+                        margin-left: 25px;
+                        opacity: 0.6;
                     }
                 }
 
