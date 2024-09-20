@@ -48,7 +48,8 @@ const Contact = () => {
         <motion.div
         initial={{y: "-100%"}}
         animate={{y: "0%"}}
-        transition={{duration: 0.9, ease: "easeOut", type: "spring"}}>
+        transition={{duration: 0.9, ease: "easeOut", type: "spring"}}
+        exit={{zoom: 2.9, opacity: 0, y: "-50%"}}>
             <div className='container contact-page'>
                 <div className='text-zone'>
                     <h1>
